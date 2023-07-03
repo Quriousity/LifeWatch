@@ -35,9 +35,3 @@ async def root():
         t = json.load(fr)
     t['time'] = str(t['time'])
     return t
-
-@app.post("/ex")
-async def root():
-    print(os.getpid())
-    os.system("python test.py")
-    print(os.getpid())
